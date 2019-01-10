@@ -89,7 +89,7 @@ def user_info(request, template='success.html'):
         user_file_list = requests.post('https://api.dropboxapi.com/2/files/list_folder',
         headers={'Authorization': Bearer},
         json={
-                "path": "/Math/113/",
+                "path": "",
             }).json()['entries']
         
 
