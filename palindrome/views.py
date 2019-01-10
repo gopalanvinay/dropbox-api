@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from .models import UserDetail
 import requests
 import json
+import os
 
 def home(request, template='home.html'):
     return render(request, template, {})
@@ -12,7 +13,7 @@ def home(request, template='home.html'):
 def redirect(request):
 
     """ CONSTRUCT REDIRECT URI TO oAUTH """
-    client_id = config('CLIENT_ID')
+    client_id = os.environ.get('CLIENT_ID')
     response_type = "code"
     state = "041b48ea"
     redirect_uri = "https://evening-coast-74577.herokuapp.com/get-access"
