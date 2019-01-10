@@ -12,7 +12,7 @@ def home(request, template='home.html'):
 def redirect(request):
 
     """ CONSTRUCT REDIRECT URI TO oAUTH """
-    client_id = "dntza0a177su3p3"
+    client_id = config('CLIENT_ID')
     response_type = "code"
     state = "041b48ea"
     redirect_uri = "https://evening-coast-74577.herokuapp.com/get-access"
