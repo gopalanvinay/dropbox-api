@@ -15,7 +15,7 @@ def redirect(request):
     client_id = "dntza0a177su3p3"
     response_type = "code"
     state = "041b48ea"
-    redirect_uri = "http://127.0.0.1:8000/get-access"
+    redirect_uri = "https://evening-coast-74577.herokuapp.com/get-access"
     uri = "https://www.dropbox.com/oauth2/authorize?"
 
     uri += "client_id=" + client_id
@@ -34,7 +34,7 @@ def get_access(request):
 
         """ TO GET ACCESS TOKEN """
         code = request.GET.get('code')
-        redirect_uri = "http://127.0.0.1:8000/get-access"
+        redirect_uri = "https://evening-coast-74577.herokuapp.com/get-access"
         client_id = "dntza0a177su3p3"
         client_secret = "2v0zjawwysbiew3"
         url = "https://api.dropboxapi.com/oauth2/token"
@@ -71,7 +71,7 @@ def get_access(request):
         return HttpResponseRedirect(new_redirect_uri)
 
     else:
-        new_redirect_uri = "http://127.0.0.1:8000/"
+        new_redirect_uri = "https://evening-coast-74577.herokuapp.com"
         return HttpResponseRedirect(new_redirect_uri)        
     
 #####################################################################################################
