@@ -36,8 +36,8 @@ def get_access(request):
         """ TO GET ACCESS TOKEN """
         code = request.GET.get('code')
         redirect_uri = "https://evening-coast-74577.herokuapp.com/get-access"
-        client_id = "dntza0a177su3p3"
-        client_secret = "2v0zjawwysbiew3"
+        client_id = os.environ.get('CLIENT_ID')
+        client_secret = os.environ.get('CLIENT_SECRET')
         url = "https://api.dropboxapi.com/oauth2/token"
         postdata = {
             'grant_type' : 'authorization_code',
