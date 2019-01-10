@@ -36,11 +36,11 @@ def get_env_variable(var_name):
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'g-=5by932-4oyo=_s=ns*mi$ra3c_ls1u1g^b9!dzo@0hg^kjy' 
+SECRET_KEY = os.environ.get('SECRET_KEY') 
 #get_env_variable('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 """
 if ENV_ROLE == 'development':
