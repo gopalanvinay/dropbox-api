@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Contents {% endblock title %}
+{% block content %}
+<div id="header" class="page-header text-center">
+    {{ user }}'s Dropbox Details
+</div>
+<div class = "list container">
+    {% for entry in list %}
+    <div class="row">   
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-10>"
+                <p class="text-left"> {{ entry.name }}</p>
+            </div>
+    </div>
+   {% endfor %}
+</div>
+{% endblock content %}
+
+<!-- -->
+<!--  -->
